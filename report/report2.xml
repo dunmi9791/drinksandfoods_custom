@@ -6,9 +6,17 @@
                 id="report_ThermalReceipt"
                 model="sale.order"
                 string="Thermal Receipt"
-                name="drinksandfoods_custom.report_thermalreceipt"
-                file="drinksandfoods_custom.report_thermalreceipt"
+                name="drinksandfoods_custom.report_thermal"
+                file="drinksandfoods_custom.report_thermal"
                 report_type="qweb-pdf"/>
+        <report
+                id="report_ThermalReceipt_h"
+                model="sale.order"
+                string="Thermal Receipt html"
+                name="drinksandfoods_custom.report_thermal"
+                file="drinksandfoods_custom.report_thermal"
+                report_type="qweb-html"/>
+
         <report
                 id="report_NewReceipt"
                 model="sale.order"

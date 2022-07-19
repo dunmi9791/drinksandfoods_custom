@@ -229,11 +229,10 @@
         </t>
     </t>
 </template>
-        
-        <template id="report_thermalreceipt_doc">
+           <template id="report_thermal_doc">
             <t t-call="web.external_layout">
                 <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)" />
-<!--                 <t t-set="address">
+                <t t-set="address">
                     <div t-field="doc.partner_id"
                         t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
                     <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
@@ -251,7 +250,7 @@
                             <div t-field="doc.partner_shipping_id"
                                 t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                         </t>
-                    </t> -->
+                    </t>
                 </t>
                 <div class="page">
                     <div class="oe_structure"/>
@@ -308,7 +307,7 @@
                                 <th class="text-right">Unit Price</th>
 <!--                                 <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
                                     <span>Disc.(%)</span>
-                                    TODO: remove in master 
+                                    TODO: remove in master
                                     <t t-set="colspan" t-value="colspan+1"/>
                                 </th> -->
 <!--                                <th class="text-right">Taxes</th>-->
@@ -450,12 +449,13 @@
 
                     <div class="oe_structure"/>
                 </div>
-       
+            </t>
         </template>
-        <template id="report_thermalreceipt">
+        
+<template id="report_thermal">
     <t t-call="web.html_container">
         <t t-foreach="docs" t-as="doc">
-            <t t-call="drinksandfoods_custom.report_thermalreceipt_doc" t-lang="doc.partner_id.lang"/>
+            <t t-call="drinksandfoods_custom.report_thermal_doc" t-lang="doc.partner_id.lang"/>
         </t>
     </t>
 </template>
