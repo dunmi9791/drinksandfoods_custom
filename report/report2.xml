@@ -10,6 +10,13 @@
                 file="drinksandfoods_custom.report_thermal"
                 report_type="qweb-pdf"/>
         <report
+                id="report_ThermalReceipt"
+                model="sale.order"
+                string="Thermal Receipt pos"
+                name="drinksandfoods_custom.report_thermal_pos"
+                file="drinksandfoods_custom.report_thermal_pos"
+                report_type="qweb-pdf"/>
+        <report
                 id="report_ThermalReceipt_h"
                 model="sale.order"
                 string="Thermal Receipt html"
