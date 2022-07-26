@@ -729,6 +729,9 @@
 							<div style="text-align:center;">
 								<t t-esc='doc.company_id.name'/>
 							</div>
+                            <div style="text-align:center;">
+								<t t-esc='doc.company_id.street'/>
+							</div>
 							<div style="text-align:center;">
 								Tel: <t t-esc='doc.company_id.phone'/>
 							</div>
@@ -740,14 +743,17 @@
 							</div>
 							<div style="text-align:center;">------------------</div>
 							<div style="text-align:center;">
-								Served by <t t-esc='doc.user_id.name'/>
+								Staff: <t t-esc='doc.user_id.name'/>
 							</div>
 							<br/>
 							<div style="text-align:center;">
-								<t t-esc='doc.partner_id.name'/>
+								Customer: <t t-esc='doc.partner_id.name'/>
 							</div>
 							<div style="text-align:center;">
 								<t t-esc='doc.partner_id.phone'/>
+							</div>
+                            <div style="text-align:center;">
+								<t t-esc='doc.name'/>
 							</div>
 							<br/>
 						</div>
