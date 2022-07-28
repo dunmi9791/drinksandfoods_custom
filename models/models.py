@@ -75,13 +75,13 @@ class ProductTemplate(models.Model):
         string="Description_purchase",
         required=False, related='description_sale' )
 
-
-    def name_get(self):
-        result = []
-        for rec in self:
-            rec_name = rec.description_sale
-            result.append((rec.id, rec_name))
-        return result
+    #
+    # def name_get(self):
+    #     result = []
+    #     for rec in self:
+    #         rec_name = rec.description_sale
+    #         result.append((rec.id, rec_name))
+    #     return result
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'
