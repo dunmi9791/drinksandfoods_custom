@@ -769,7 +769,7 @@
 							<tbody>
 								<tr t-foreach='doc.order_line' t-as='line' width="100%">
 									<td class="text-left">
-										[<span t-field='line.product_id.default_code'/>] <span t-field='line.name'/><br/>
+										[<span t-field='line.product_id.default_code'/>] <span t-field='line.product_id.new_name'/><br/>
 										<span t-if='line.discount != 0'>
 											<div class="text-left" style="color:grey">
 												With a <t t-esc='line.discount' />% Discount

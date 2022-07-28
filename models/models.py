@@ -87,6 +87,13 @@ class ProductProduct(models.Model):
     _inherit = 'product.product'
 
 
+    new_name = fields.Char(string="Complete Name", compute="com_name")
+
+    def com_name(self):
+        for rec in self:
+            rec['new_name'] = (rec.brand_id.name or '') + ' ' + (rec.name or '')
+
+
     def name_get(self):
         result = []
         for rec in self:
